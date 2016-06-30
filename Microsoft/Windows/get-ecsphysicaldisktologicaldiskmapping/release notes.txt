@@ -1,0 +1,8 @@
+Version 0.1
+- Added release notes
+- Added version number
+- Renamed to get-ecsphysicaldisktologicaldiskmapping
+- Renamed "PhysicalDiskDiskSerialNumber" object to "PhysicalDiskSerialNumber"
+
+Version 0.0
+Initial release				
