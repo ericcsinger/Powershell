@@ -1,4 +1,4 @@
-#powershell_microsoft_windows_get-physicaldisktologicaldisk
+#powershell_microsoft_SQL_Invoke-ECSSQLQuery
 A simple function that is used to execute a SQL query in Powershell.  
 
 The main purpose is to retrieve data in powershell from SQL for use in other purposes, but it can be used for anything that's executed via a SQL query.
