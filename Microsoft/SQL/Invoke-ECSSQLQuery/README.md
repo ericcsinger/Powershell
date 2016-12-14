@@ -11,6 +11,6 @@ Invoke-ECSSQLQuery -DatabaseServer "ServerNameOnly or ServerName\Instance" -Data
 
 There is also an optional timeout parameter that can be used for long running queries.  Setting the parameter to 0 = no time out.  Default is 30.
 
-For more information, contact the auther at http://ericcsinger.com
+For more information, contact the author at http://www.ericcsinger.com/powershell-scripting-invoke-ecssqlquery/
 
 The basic structure of the query is not mine, its borrowed from random websites out on the web.  All I did was put it into a function.
