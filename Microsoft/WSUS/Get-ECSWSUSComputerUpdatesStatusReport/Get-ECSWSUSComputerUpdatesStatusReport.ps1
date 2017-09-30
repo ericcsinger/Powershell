@@ -107,7 +107,7 @@ Where [$($WSUSDataBaseName)].[PUBLIC_VIEWS].[vComputerTarget].[ComputerTargetId]
         $UpdateStatusDetails = Invoke-ECSSQLQuery -DatabaseServer $WSUSDataBaseServerName -DatabaseName $WSUSDataBaseName -SQLQuery $SQLQueryToGetComputerUpdateStatusDetails -Timeout $SQLQueryTimeoutSeconds | Select-Object UpdateId,State,FriendlyState,UpdateApprovalId,Action,DefaultTitle,DefaultDescription,KnowledgebaseArticle,RevisionNumber,UpdateType,IsDeclined,TargetGroupName,ClassifacationTitle
         $UpdateStatusDetailsCount = $UpdateStatusDetails | Measure-Object | Select-Object -ExpandProperty count
         Write-Verbose "Query completed, checking that we have at least one result"
-        If ($UpdateStatusDetailsCount -le 0)
+        If (($UpdateStatusDetailsCount | Measure-Object | Select-Object -ExpandProperty Count) -le 0)
             {
             Write-Verbose "No update results found after executing query"
             Throw "No updates returned, something isn't right, and I have no idea offhand"
