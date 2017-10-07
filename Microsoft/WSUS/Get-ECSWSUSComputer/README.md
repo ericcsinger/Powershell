@@ -16,6 +16,6 @@ If you need to use SQL auth, you can adjust the Get-ECSWSUSComputer to use SQL a
 Optional Parameter:
 The timeout is the only optional param.  The default is 30 seconds.  if you have a slow SQL server or something else related to SQL causing a timeout error, you can use this param to increase the time out.  Setting it to "0" equals no timeout.
 
-For more information, contact the author 
+For more information, contact the author here http://www.ericcsinger.com/powershell-scripting-get-ecswsuscomputer-and-get-ecswsuscomputersintargetgroup/
 
 
