@@ -212,6 +212,15 @@
             #Matching the user right in our mapping CSV file
             $UserRightMappingMatch = $UserRightsMapings | Where-Object {$_.SecEditName -eq $UserRightSeceditName}
 
+            #Now we need to check if the user right mapping is null, if it is, we'll fill in some temp data
+            If ($UserRightMappingMatch -eq $null)
+                {
+                $UserRightMappingMatch = New-Object PSObject -Property @{
+	                FriendlyUserRightName = "No Match found, submit bug report"
+                    Description = "No Match found, submit bug report"
+                    }
+                }
+
             #Now let's see if the user right is null so we don't waist time parsing a right that's empty
             If ($UserRightSeceditSIDs -ne $null)
                 {
