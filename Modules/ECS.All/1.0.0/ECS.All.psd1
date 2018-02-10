@@ -63,7 +63,7 @@ TypesToProcess = @()
 #FormatsToProcess = ''
 
 # Modules to import as nested modules of the module specified in ModuleToProcess
-NestedModules= @('ECS.All.ps1')
+NestedModules= @('ECS.All.psm1')
 
 # Functions to export from this module
 FunctionsToExport = '*'
