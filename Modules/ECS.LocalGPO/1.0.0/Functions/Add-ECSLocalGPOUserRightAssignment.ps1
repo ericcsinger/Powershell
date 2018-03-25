@@ -2,20 +2,17 @@
     {
     <#
     .SYNOPSIS
-    Retrieves all Local Group Policy Object (GPO) user right assignments.
+    Adds an identity to a Local Group Policy Object (GPO) user right assignments.
     .DESCRIPTION
-    Get-ECSLocalGPOUserRightAssignment will retrieve Local Group Policy Object (GPO) user right assignments.
-    This function is useful if you're looking to audit or backup your current user right assignments to a CSV.
+    Add-ECSLocalGPOUserRightAssignment will add and identity to a Local Group Policy Object (GPO) user right assignments.
+    This function is useful if you're looking to add a user right assignments to your local GPO.
     This function utilizes the Windows builtin SecEdit.exe to export the user rights list, and then this function
     parses the exported file. 
-    .PARAMETER MergedPolicy
-    This parameter merges and exports domain and local policy security settings.
+    .PARAMETER Identity
+    This parameter can be an array of identities. Local, Domain and SIDs are all vailed options.
     .EXAMPLE
-    This example exports all non-merged user right assignments.
-        Get-ECSLocalGPOUserRightAssignment
-    .EXAMPLE
-    This example exports all MERGED user right assignments.
-        Get-ECSLocalGPOUserRightAssignment -MergedPolicy
+    This example adds multiple users to the shutdown right. Both sids and local users.
+        Add-ECSLocalGPOUserRightAssignment -Identity @("PCName\LocalGroup","S-1-5-32-555","domain\exampleuser") -SeShutdownPrivilege
     #>
     [CmdletBinding()]
     Param
