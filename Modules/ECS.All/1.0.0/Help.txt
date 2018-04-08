@@ -1,0 +1,8 @@
+<h1>ECS.All</h1>
+
+This module is a boot strapping module to call all my sub-modules and serve as a master version document.
+
+Overall Module Version: 1.0
+
+Modules:
+ECS.LocalGPO
