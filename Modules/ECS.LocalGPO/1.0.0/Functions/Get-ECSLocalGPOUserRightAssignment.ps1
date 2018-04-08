@@ -256,7 +256,7 @@
 	                    SecEditUserRightName = $($UserRightSeceditName)
 	                    SIDWithOutTheAsterix = $($objSID.value)
                         SIDWITHTheAsterix = $($SplitSID)
-	                    FriendlySIDName = $($FriendlyNameToSIDMapping)
+	                    Identity = $($FriendlyNameToSIDMapping)
                         }
                     $Result
 
@@ -272,7 +272,7 @@
                     SecEditUserRightName = $($UserRightSeceditName)
 	                SIDWithOutTheAsterix = "no SID found, no assignment"
                     SIDWITHTheAsterix = "no SID found, no assignment"
-	                FriendlySIDName = "no SID found, no assignment"
+	                Identity = "no SID found, no assignment"
                     }
                 $Result
                 }
